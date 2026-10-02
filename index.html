@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prank</title>
+
+    <style>
+        html, body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            background: black;
+            overflow: hidden;
+        }
+
+        img {
+            width: 100vw;
+            height: 100vh;
+            object-fit: contain;
+            display: block;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <img id="photo" src="photo.jpg" alt="">
+
+    <audio id="sound" loop></audio>
+
+    <script>
+        const sound = document.getElementById("sound");
+
+        document.addEventListener("click", () => {
+            sound.src = "sound.mp3";
+            sound.loop = true;
+            sound.play();
+        }, { once: true });
+    </script>
+
+</body>
+</html>
